@@ -1,0 +1,7 @@
+spring:
+  main:
+    web-application-type: none
+
+services:
+  payment:
+    url: "localhost:8080/payment"
