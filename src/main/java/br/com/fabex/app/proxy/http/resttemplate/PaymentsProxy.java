@@ -22,14 +22,13 @@ public class PaymentsProxy {
     }
 
     public Payment createPayment(String traceId, Payment payment){
-        String uri = "http://" + paymentsServiceUrl;
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("requestId", traceId);
 
         HttpEntity<Payment> httpEntity = new HttpEntity<>(payment, headers);
 
-        ResponseEntity<Payment> response = rest.exchange(uri,
+        ResponseEntity<Payment> response = rest.exchange(paymentsServiceUrl.concat("/payment"),
                 HttpMethod.POST,
                 httpEntity,
                 Payment.class);

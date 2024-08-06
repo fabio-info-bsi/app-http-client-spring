@@ -1,7 +1,7 @@
 # app-http-client-spring
 Um exemplo da utilização dos clients http: OpenFeign, RestTemplate e WebClient.
 
-Também, a implementação de requests http encadeadas com usuo de WebClient (Reative) na classe [`br.com.fabex.app.ChainedWebClientApplication`](src/main/java/br/com/fabex/app/ChainedWebClientApplication.java). 
+Também, a implementação de requests http encadeadas com usuo de WebClient (Reative) na classe [`br.com.fabex.app.ChainedWebClientApplication`](src/main/java/br/com/fabex/app/ChainedWebClientApplication.java), retentativas de requisições (`retryWhen`) e configurando timeout em requests (`timeout(Duration.ofMillis(<seconds>))`). 
 
 ## Usou/Criou:
 - OpenFeing (@EnableFeignClients, @FeignClient)
